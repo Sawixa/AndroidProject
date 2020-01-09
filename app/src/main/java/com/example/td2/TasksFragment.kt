@@ -72,6 +72,14 @@ class TasksFragment :Fragment()
         coroutineScope.launch {
             Api.userService.getInfo()
         }
+        tasksRepository.getTasks().observe(this, Observer {
+            if( it != null){
+                tasks.clear()
+                tasks.addAll(it)
+                Log.e("task ", it.toString())
+                taskAdapter.notifyDataSetChanged()
+            }
+        })
         super.onResume()
     }
 

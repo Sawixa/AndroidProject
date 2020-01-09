@@ -9,11 +9,10 @@
     <fragment
         android:id="@+id/header_fragment"
         android:name="com.example.td2.HeaderFragment"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,27 +23,44 @@
         android:id="@+id/tasks_fragment"
         android:name="com.example.td2.TasksFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/AddButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_fragment">
 
     </fragment>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+    <Button
+        android:id="@+id/AddButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:focusable="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_add_circle_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        tools:ignore="MissingConstraints" />
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/floatingActionButton"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_add_circle_black_24dp"-->
+<!--        tools:ignore="VectorDrawableCompat" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
